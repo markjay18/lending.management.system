@@ -1,0 +1,26 @@
+/*input, button, div, textarea glowing style highlights pure CSS - frontend design */
+ input, button, div, textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+}
+input:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 15px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+button:hover, div:hover {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+
+<?php
+/*Get the last row inserted by ID*/
+$sql="SELECT * FROM ledger ORDER BY ID DESC LIMIT 1";
+$query=mysql_query($sql);
+$row = mysql_fetch_row($query);
+
+?>
